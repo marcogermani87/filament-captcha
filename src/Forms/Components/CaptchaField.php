@@ -2,15 +2,15 @@
 
 namespace MarcoGermani87\FilamentCaptcha\Forms\Components;
 
-use App\Rules\Captcha;
-use Filament\Forms\Components\Field;
 use Gregwar\Captcha\CaptchaBuilder;
+use Filament\Forms\Components\Field;
+use MarcoGermani87\FilamentCaptcha\Rules\Captcha;
 
 class CaptchaField extends Field
 {
     protected CaptchaBuilder $captcha;
 
-    protected string $view = 'forms.components.captcha-field';
+    protected string $view = 'filament-captcha::forms.components.captcha-field';
 
     protected function setUp(): void
     {
@@ -37,6 +37,6 @@ class CaptchaField extends Field
             ->build(
                 config('filament-captcha.width') ?? 150,
                 config('filament-captcha.height') ?? 40
-            );
+            )->inline();
     }
 }
