@@ -19,6 +19,7 @@ class CaptchaField extends Field
         $this->captcha = new CaptchaBuilder;
 
         $this->rules([new Captcha])
+            ->dehydrated(false)
             ->required();
     }
 
