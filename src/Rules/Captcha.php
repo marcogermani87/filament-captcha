@@ -13,7 +13,7 @@ class Captcha implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         if ($value !== session('filament_captcha_code')) {
-            $fail(__('messages.captcha_invalid'));
+            $fail(__('filament-captcha::filament-captcha.captcha_invalid'));
         }
     }
 }
