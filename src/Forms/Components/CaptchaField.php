@@ -3,8 +3,8 @@
 namespace MarcoGermani87\FilamentCaptcha\Forms\Components;
 
 use App\Rules\Captcha;
-use Gregwar\Captcha\CaptchaBuilder;
 use Filament\Forms\Components\Field;
+use Gregwar\Captcha\CaptchaBuilder;
 
 class CaptchaField extends Field
 {
@@ -16,7 +16,7 @@ class CaptchaField extends Field
     {
         parent::setUp();
 
-        $this->captcha = new CaptchaBuilder();
+        $this->captcha = new CaptchaBuilder;
 
         $this->rules([new Captcha])
             ->required();
