@@ -2,8 +2,8 @@
 
 namespace MarcoGermani87\FilamentCaptcha;
 
-use Filament\Panel;
 use Filament\Contracts\Plugin;
+use Filament\Panel;
 
 class FilamentCaptcha implements Plugin
 {
