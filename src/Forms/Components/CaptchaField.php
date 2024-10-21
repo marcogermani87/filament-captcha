@@ -2,8 +2,8 @@
 
 namespace MarcoGermani87\FilamentCaptcha\Forms\Components;
 
-use Gregwar\Captcha\CaptchaBuilder;
 use Filament\Forms\Components\Field;
+use Gregwar\Captcha\CaptchaBuilder;
 use MarcoGermani87\FilamentCaptcha\Rules\Captcha;
 
 class CaptchaField extends Field
