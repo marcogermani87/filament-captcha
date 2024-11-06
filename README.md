@@ -50,13 +50,13 @@ Register the plugin through your panel service provider:
 You can include the captcha field like any other filament field.
 
 ```php
-use MarcoGermani87\FilamentCookieConsent\Components\Captcha;
+use MarcoGermani87\FilamentCookieConsent\Components\CaptchaField;
 
 protected function getFormSchema(): array
 {
     return [
         ...
-        Captcha::make('captcha')
+        CaptchaField::make('captcha')
     ];
 }
 ```
