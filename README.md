@@ -61,6 +61,10 @@ protected function getFormSchema(): array
 }
 ```
 
+## Screenshots
+
+<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/main/screenshots/captcha.png" style="border-radius:2%"/>
+
 ## Testing
 
 ```bash
