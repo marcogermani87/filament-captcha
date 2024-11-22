@@ -2,6 +2,14 @@
 
 All notable changes to `filament-captcha` will be documented in this file.
 
+## v1.2.1 - 2024-11-22
+
+### What's Changed
+
+* Fixed captcha rule validation messages
+
+**Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v1.2.0...v1.2.1
+
 ## v1.2.0 - 2024-11-06
 
 ### What's Changed
