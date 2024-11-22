@@ -26,8 +26,7 @@ class CaptchaField extends Field
             ->required()
             ->validationMessages([
                 'required' => __('filament-captcha::filament-captcha.captcha_required'),
-            ])
-        ;
+            ]);
     }
 
     public function render(): View
