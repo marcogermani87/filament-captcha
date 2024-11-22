@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'captcha_invalid' => 'Wrong captcha code provided.',
-    'captcha_required' => 'The captcha field is required.',
+    'captcha_invalid' => 'Codice di controllo non valido.',
+    'captcha_required' => 'Codice di controllo richiesto.',
 ];
