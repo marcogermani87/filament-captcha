@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'captcha_invalid' => 'Wrong :attribute code provided.',
+    'captcha_invalid' => 'Wrong captcha code provided.',
+    'captcha_required' => 'The captcha field is required.',
 ];

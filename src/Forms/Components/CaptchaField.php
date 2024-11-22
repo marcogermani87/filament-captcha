@@ -23,7 +23,11 @@ class CaptchaField extends Field
 
         $this->rules([new Captcha])
             ->dehydrated(false)
-            ->required();
+            ->required()
+            ->validationMessages([
+                'required' => __('filament-captcha::filament-captcha.captcha_required'),
+            ])
+        ;
     }
 
     public function render(): View
