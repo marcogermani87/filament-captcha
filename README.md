@@ -7,7 +7,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/marcogermani87/filament-captcha/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/:vendor_slug/filament-captcha/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/marcogermani87/filament-captcha.svg?style=flat-square)](https://packagist.org/packages/marcogermani87/filament-captcha)
 
-A package to easily include cookie consent in [Filament](https://filamentphp.com).
+A package to easily include captcha field into [Filament](https://filamentphp.com) forms.
 
 This plugin is based on [Gregwar/Captcha](https://github.com/Gregwar/Captcha) package.
 
