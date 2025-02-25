@@ -11,6 +11,14 @@ A package to easily include captcha field into [Filament](https://filamentphp.co
 
 This plugin is based on [Gregwar/Captcha](https://github.com/Gregwar/Captcha) package.
 
+## Version Compatibility
+
+| Plugin  | Filament | Laravel | PHP |
+| ------------- | ------------- | ------------- | -------------|
+| 1.x  | 3.x  | 10.x | 8.x |
+| 1.x  | 3.x  | 11.x | 8.2 \| 8.3 \| 8.4 |
+| 1.x  | 3.x  | 12.x | 8.2 \| 8.3 \| 8.4 |
+
 ## Installation
 
 You can install the package via composer:
