@@ -2,6 +2,20 @@
 
 All notable changes to `filament-captcha` will be documented in this file.
 
+## v1.4.0 - 2025-02-25
+
+### What's Changed
+
+* Compatibility with Laravel 12.x
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/marcogermani87/filament-captcha/pull/2
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot in https://github.com/marcogermani87/filament-captcha/pull/3
+
+### New Contributors
+
+* @dependabot made their first contribution in https://github.com/marcogermani87/filament-captcha/pull/2
+
+**Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v1.3.0...v1.4.0
+
 ## v1.3.0 - 2025-01-21
 
 ### What's Changed
