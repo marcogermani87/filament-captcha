@@ -2,9 +2,11 @@
     "name": "marcogermani87/filament-captcha",
     "description": "Easy Captcha image integrations for Filament",
     "keywords": [
-        "MarcoGermani87",
+        "marcogermani87",
         "laravel",
-        "filament-captcha"
+        "filament",
+        "captcha",
+        "php"
     ],
     "homepage": "https://github.com/marcogermani87/filament-captcha",
     "license": "MIT",
