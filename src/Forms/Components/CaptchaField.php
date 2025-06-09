@@ -6,6 +6,8 @@ use Filament\Forms\Components\Field;
 use Gregwar\Captcha\CaptchaBuilder;
 use Illuminate\Contracts\View\View;
 use MarcoGermani87\FilamentCaptcha\Rules\Captcha;
+use Gregwar\Captcha\PhraseBuilder;
+
 
 class CaptchaField extends Field
 {
@@ -19,7 +21,11 @@ class CaptchaField extends Field
     {
         parent::setUp();
 
-        $this->captcha = new CaptchaBuilder;
+        $charset = config('filament-captcha.charset') ?? "abcdefghijklmnpqrstuvwxyz123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        $phraseBuilder = new PhraseBuilder(config('filament-captcha.length') ?? 5, $charset);
+
+        $this->captcha = new CaptchaBuilder(null, $phraseBuilder);
 
         $this->rules([new Captcha])
             ->dehydrated(false)
