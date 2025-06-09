@@ -2,6 +2,19 @@
 
 All notable changes to `filament-captcha` will be documented in this file.
 
+## v1.5.0 - 2025-06-09
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot in https://github.com/marcogermani87/filament-captcha/pull/4
+* Added capability for defining length and charset via config file by @jwhoami in https://github.com/marcogermani87/filament-captcha/pull/5
+
+### New Contributors
+
+* @jwhoami made their first contribution in https://github.com/marcogermani87/filament-captcha/pull/5
+
+**Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v1.4.0...v1.5.0
+
 ## v1.4.0 - 2025-02-25
 
 ### What's Changed
