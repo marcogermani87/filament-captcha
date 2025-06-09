@@ -4,10 +4,9 @@ namespace MarcoGermani87\FilamentCaptcha\Forms\Components;
 
 use Filament\Forms\Components\Field;
 use Gregwar\Captcha\CaptchaBuilder;
+use Gregwar\Captcha\PhraseBuilder;
 use Illuminate\Contracts\View\View;
 use MarcoGermani87\FilamentCaptcha\Rules\Captcha;
-use Gregwar\Captcha\PhraseBuilder;
-
 
 class CaptchaField extends Field
 {
@@ -21,7 +20,7 @@ class CaptchaField extends Field
     {
         parent::setUp();
 
-        $charset = config('filament-captcha.charset') ?? "abcdefghijklmnpqrstuvwxyz123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $charset = config('filament-captcha.charset') ?? 'abcdefghijklmnpqrstuvwxyz123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
         $phraseBuilder = new PhraseBuilder(config('filament-captcha.length') ?? 5, $charset);
 
