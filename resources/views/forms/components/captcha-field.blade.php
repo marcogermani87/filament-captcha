@@ -2,24 +2,9 @@
     :component="$getFieldWrapperView()"
     :field="$field"
 >
-    <div class="inline-flex space-x-2">
-        <img wire:model="image" class="rounded border-solid border-2" src="{{ $field->image }}"/>
-        <x-filament::link
-            wire:click="mountFormComponentAction('{{ $getStatePath() }}', 'refreshImage');"
-            tag="button"
-        >
-            <x-filament::icon
-                wire:loading.remove
-                wire:target="mountFormComponentAction('{{ $getStatePath() }}', 'refreshImage')"
-                icon="heroicon-o-arrow-path"
-                class="h-5 w-5"
-            />
-            <x-filament::loading-indicator
-                wire:loading
-                wire:target="mountFormComponentAction('{{ $getStatePath() }}', 'refreshImage')"
-                class="ml-3 h-5 w-5"
-            />
-        </x-filament::link>
+    <div class="inline-flex items-center space-x-2">
+        <img wire:model="image" class="rounded border-2 border-gray-200 dark:border-gray-700 w-10 h-10 object-cover" src="{{ $field->image }}"/>
+        {{ $getAction('refreshImage') }}
     </div>
     <x-filament::input.wrapper>
         <x-filament::input
