@@ -19,6 +19,6 @@ return [
     'refresh_button' => [
         'icon' => 'heroicon-o-arrow-path',
         'size' => Size::Medium,
-    ]
+    ],
 
 ];
