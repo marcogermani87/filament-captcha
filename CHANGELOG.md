@@ -2,6 +2,14 @@
 
 All notable changes to `filament-captcha` will be documented in this file.
 
+## v2.0.0 - 2025-08-16
+
+### What's Changed
+
+* Compatibility with Filament v4
+
+**Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v1.6.0...v2.0.0
+
 ## v1.6.0 - 2025-08-16
 
 ### What's Changed
