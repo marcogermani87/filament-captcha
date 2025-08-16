@@ -17,7 +17,7 @@ class Captcha implements ValidationRule
         if (strlen($value) !== $length) {
             $fail(
                 __('filament-captcha::filament-captcha.captcha_length_invalid', [
-                    'length' => $length
+                    'length' => $length,
                 ])
             );
         }

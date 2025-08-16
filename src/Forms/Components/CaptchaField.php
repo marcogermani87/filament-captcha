@@ -3,7 +3,6 @@
 namespace MarcoGermani87\FilamentCaptcha\Forms\Components;
 
 use Filament\Actions\Action;
-use Filament\Forms\Components\Field;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Gregwar\Captcha\CaptchaBuilder;
@@ -13,7 +12,7 @@ use MarcoGermani87\FilamentCaptcha\Rules\Captcha;
 
 class CaptchaField extends TextInput
 {
-//    use InteractsWithForms;
+    //    use InteractsWithForms;
 
     public string $image = '';
 
