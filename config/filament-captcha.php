@@ -16,7 +16,6 @@ return [
 
     'background_color' => [255, 255, 255],
 
-
     'refresh_button' => [
         'icon' => 'heroicon-o-arrow-path',
         'size' => ActionSize::Medium,
