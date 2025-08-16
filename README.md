@@ -13,11 +13,10 @@ This plugin is based on [Gregwar/Captcha](https://github.com/Gregwar/Captcha) pa
 
 ## Version Compatibility
 
-| Plugin | Filament | Laravel | PHP |
-|--------|----------| ------------- | -------------|
-| 1.x    | 3.x      | 10.x | 8.x |
-| 1.x    | 3.x      | 11.x \| 12.x | 8.2 \| 8.3 \| 8.4 |
-| 2.x    | 4.x      | 11.x \| 12.x | 8.2 \| 8.3 \| 8.4 |
+| Plugin  | Filament | Laravel | PHP |
+| ------------- | ------------- | ------------- | -------------|
+| 1.x  | 3.x  | 10.x | 8.x |
+| 1.x  | 3.x  | 11.x \| 12.x | 8.2 \| 8.3 \| 8.4 |
 
 ## Installation
 
@@ -36,29 +35,14 @@ php artisan vendor:publish --tag="filament-captcha-config"
 This is the contents of the published config file:
 
 ```php
-<?php
-
-use Filament\Support\Enums\Size;
-
 return [
 
-    // optional, default is 5
-    // 'length' => 4,
-
-    // optional, default is 'abcdefghijklmnpqrstuvwxyz123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    // 'charset' => '123456789',
-
     'width' => 180,
-
+    
     'height' => 50,
-
+    
     'background_color' => [255, 255, 255],
-
-    'refresh_button' => [
-        'icon' => 'heroicon-o-arrow-path',
-        'size' => Size::Medium,
-    ]
-
+    
 ];
 ```
 
@@ -73,25 +57,20 @@ Register the plugin through your panel service provider:
 You can include the captcha field like any other filament field.
 
 ```php
-<?php
-
 use MarcoGermani87\FilamentCookieConsent\Components\CaptchaField;
 
-public function form(Schema $schema): Schema
+protected function getFormSchema(): array
 {
-    return $schema
-        ->components([
-            ...
-            CaptchaField::make('captcha'),
-        ]);
+    return [
+        ...
+        CaptchaField::make('captcha')
+    ];
 }
 ```
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/2.0.0/screenshots/filament_captche_light.png" style="border-radius:2%"/>
-
-<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/2.0.0/screenshots/filament_captche_dark.png" style="border-radius:2%"/>
+<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/main/screenshots/captcha.png" style="border-radius:2%"/>
 
 ## Testing
 
