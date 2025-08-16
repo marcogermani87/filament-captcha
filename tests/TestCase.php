@@ -17,14 +17,14 @@ class TestCase extends Orchestra
         );
     }
 
-    protected function getPackageProviders($app): array
+    protected function getPackageProviders($app)
     {
         return [
             FilamentCaptchaServiceProvider::class,
         ];
     }
 
-    public function getEnvironmentSetUp($app): void
+    public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
 
