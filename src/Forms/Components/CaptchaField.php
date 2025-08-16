@@ -2,7 +2,9 @@
 
 namespace MarcoGermani87\FilamentCaptcha\Forms\Components;
 
+use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Components\Field;
+use Filament\Support\Enums\ActionSize;
 use Gregwar\Captcha\CaptchaBuilder;
 use Gregwar\Captcha\PhraseBuilder;
 use Illuminate\Contracts\View\View;
@@ -18,11 +20,9 @@ class CaptchaField extends Field
 
     protected function setUp(): void
     {
-        parent::setUp();
+        $charset = config('filament-captcha.charset', 'abcdefghijklmnpqrstuvwxyz123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
-        $charset = config('filament-captcha.charset') ?? 'abcdefghijklmnpqrstuvwxyz123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-        $phraseBuilder = new PhraseBuilder(config('filament-captcha.length') ?? 5, $charset);
+        $phraseBuilder = new PhraseBuilder(config('filament-captcha.length', 5), $charset);
 
         $this->captcha = new CaptchaBuilder(null, $phraseBuilder);
 
@@ -31,7 +31,20 @@ class CaptchaField extends Field
             ->required()
             ->validationMessages([
                 'required' => __('filament-captcha::filament-captcha.captcha_required'),
+            ])
+            ->registerActions([
+                Action::make('refreshImage')
+                    ->hiddenLabel()
+                    ->icon(config('filament-captcha.refresh_button.icon', 'heroicon-o-arrow-path'))
+                    ->action(function () {
+                        $this->refreshImage();
+                    })
+                    ->link()
+                    ->outlined()
+                    ->size(config('filament-captcha.refresh_button.size', ActionSize::Medium)),
             ]);
+
+        parent::setUp();
     }
 
     public function render(): View
@@ -50,7 +63,9 @@ class CaptchaField extends Field
     {
         session(['filament_captcha_code' => $this->captcha->getPhrase()]);
 
-        $backgroundColor = config('filament-captcha.background_color');
+        $backgroundColor = config('filament-captcha.background_color', [
+            255, 255, 255,
+        ]);
 
         return $this->captcha
             ->setBackgroundColor(
@@ -59,8 +74,8 @@ class CaptchaField extends Field
                 $backgroundColor[2] ?? 255
             )
             ->build(
-                config('filament-captcha.width') ?? 150,
-                config('filament-captcha.height') ?? 40
+                config('filament-captcha.width', 180),
+                config('filament-captcha.height', 50)
             )->inline();
     }
 }

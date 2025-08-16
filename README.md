@@ -35,14 +35,30 @@ php artisan vendor:publish --tag="filament-captcha-config"
 This is the contents of the published config file:
 
 ```php
+<?php
+
+use Filament\Support\Enums\ActionSize;
+
 return [
 
+    // optional, default is 5
+    // 'length' => 4,
+
+    // optional, default is 'abcdefghijklmnpqrstuvwxyz123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    // 'charset' => '123456789',
+
     'width' => 180,
-    
+
     'height' => 50,
-    
+
     'background_color' => [255, 255, 255],
-    
+
+
+    'refresh_button' => [
+        'icon' => 'heroicon-o-arrow-path',
+        'size' => ActionSize::Medium,
+    ],
+
 ];
 ```
 
@@ -57,20 +73,30 @@ Register the plugin through your panel service provider:
 You can include the captcha field like any other filament field.
 
 ```php
+<?php
+
 use MarcoGermani87\FilamentCookieConsent\Components\CaptchaField;
 
-protected function getFormSchema(): array
+protected function getForms(): array
 {
     return [
-        ...
-        CaptchaField::make('captcha')
+        'form' => $this->form(
+            $this->makeForm()
+                ->schema([
+                    ...
+                    CaptchaField::make('captcha'),
+                ])
+                ->statePath('data'),
+        ),
     ];
 }
 ```
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/main/screenshots/captcha.png" style="border-radius:2%"/>
+<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/main/screenshots/filament_captche_light.png" style="border-radius:2%"/>
+
+<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/main/screenshots/filament_captche_dark.png" style="border-radius:2%"/>
 
 ## Testing
 

@@ -1,5 +1,7 @@
 <?php
 
+use Filament\Support\Enums\ActionSize;
+
 return [
 
     // optional, default is 5
@@ -13,5 +15,11 @@ return [
     'height' => 50,
 
     'background_color' => [255, 255, 255],
+
+
+    'refresh_button' => [
+        'icon' => 'heroicon-o-arrow-path',
+        'size' => ActionSize::Medium,
+    ],
 
 ];
