@@ -3,17 +3,14 @@
 namespace MarcoGermani87\FilamentCaptcha\Forms\Components;
 
 use Filament\Actions\Action;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Components\Field;
 use Gregwar\Captcha\CaptchaBuilder;
 use Gregwar\Captcha\PhraseBuilder;
 use Illuminate\Contracts\View\View;
 use MarcoGermani87\FilamentCaptcha\Rules\Captcha;
 
-class CaptchaField extends TextInput
+class CaptchaField extends Field
 {
-    //    use InteractsWithForms;
-
     public string $image = '';
 
     protected CaptchaBuilder $captcha;
