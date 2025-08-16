@@ -94,9 +94,9 @@ protected function getForms(): array
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/main/screenshots/filament_captche_light.png" style="border-radius:2%"/>
+<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/main/screenshots/filament_captcha_light.png" style="border-radius:2%"/>
 
-<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/main/screenshots/filament_captche_dark.png" style="border-radius:2%"/>
+<img src="https://raw.githubusercontent.com/marcogermani87/filament-captcha/main/screenshots/filament_captcha_dark.png" style="border-radius:2%"/>
 
 ## Testing
 
