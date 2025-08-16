@@ -2,8 +2,17 @@
 
 All notable changes to `filament-captcha` will be documented in this file.
 
-<<<<<<< HEAD
-=======
+# <<<<<<< HEAD
+
+## v1.7.0 - 2025-08-16
+
+### What's Changed
+
+* Enhanched captcha refresh action
+* Add length check rule
+
+**Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v1.6.0...v1.7.0
+
 ## v2.0.0 - 2025-08-16
 
 ### What's Changed
@@ -21,7 +30,8 @@ All notable changes to `filament-captcha` will be documented in this file.
 
 **Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v1.5.0...v1.6.0
 
->>>>>>> 0bf827161ae5e1d08fc1ea15b0069a33112953ae
+> > > > > > > 0bf827161ae5e1d08fc1ea15b0069a33112953ae
+
 ## v1.5.0 - 2025-06-09
 
 ### What's Changed
