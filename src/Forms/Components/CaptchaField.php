@@ -4,6 +4,8 @@ namespace MarcoGermani87\FilamentCaptcha\Forms\Components;
 
 use Filament\Actions\Action;
 use Filament\Forms\Components\Field;
+use Filament\Schemas\Components\Image;
+use Filament\Support\Enums\Size;
 use Gregwar\Captcha\CaptchaBuilder;
 use Gregwar\Captcha\PhraseBuilder;
 use Illuminate\Contracts\View\View;
@@ -31,17 +33,21 @@ class CaptchaField extends Field
             ->validationMessages([
                 'required' => __('filament-captcha::filament-captcha.captcha_required'),
             ])
-            ->registerActions([
+            ->aboveContent(function () {
+                return Image::make(url: $this->image, alt: 'Captcha')
+                    ->imageWidth(config('filament-captcha.width', 180))
+                    ->imageHeight(config('filament-captcha.height', 50));
+            })
+            ->afterContent(
                 Action::make('refreshImage')
                     ->hiddenLabel()
-                    ->icon('heroicon-o-arrow-path')
+                    ->icon(config('filament-captcha.refresh_button.icon', 'heroicon-o-arrow-path'))
                     ->action(function () {
                         $this->refreshImage();
                     })
                     ->button()
-                    ->outlined()
-                    ->size('sm'),
-            ]);
+                    ->size(config('filament-captcha.refresh_button.size', Size::Medium))
+            );
 
         parent::setUp();
     }
@@ -73,8 +79,8 @@ class CaptchaField extends Field
                 $backgroundColor[2] ?? 255
             )
             ->build(
-                config('filament-captcha.width', 150),
-                config('filament-captcha.height', 40)
+                config('filament-captcha.width', 180),
+                config('filament-captcha.height', 50)
             )->inline();
     }
 }
