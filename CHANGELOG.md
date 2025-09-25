@@ -4,6 +4,18 @@ All notable changes to `filament-captcha` will be documented in this file.
 
 # <<<<<<< HEAD
 
+## v1.8.0 - 2025-09-25
+
+### What's Changed
+
+* Add more translations by @hamrak in https://github.com/marcogermani87/filament-captcha/pull/12
+
+### New Contributors
+
+* @hamrak made their first contribution in https://github.com/marcogermani87/filament-captcha/pull/12
+
+**Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v1.7.0...v1.8.0
+
 ## v1.7.0 - 2025-08-16
 
 ### What's Changed
