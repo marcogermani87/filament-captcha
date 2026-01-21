@@ -4,6 +4,15 @@ All notable changes to `filament-captcha` will be documented in this file.
 
 # <<<<<<< HEAD
 
+## v2.2.0 - 2026-01-21
+
+### What's Changed
+
+* Add support to Filament 5
+  
+* **Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v2.1.0...v2.2.0
+  
+
 ## v2.1.0 - 2025-09-26
 
 ### What's Changed
