@@ -17,7 +17,7 @@ This plugin is based on [Gregwar/Captcha](https://github.com/Gregwar/Captcha) pa
 |--------|----------| ------------- | -------------|
 | 1.x    | 3.x      | 10.x | 8.x |
 | 1.x    | 3.x      | 11.x \| 12.x | 8.2 \| 8.3 \| 8.4 |
-| 2.x    | 4.x      | 11.x \| 12.x | 8.2 \| 8.3 \| 8.4 |
+| 2.x    | 4.x \| 5.x     | 11.x \| 12.x | 8.2 \| 8.3 \| 8.4 |
 
 ## Installation
 
