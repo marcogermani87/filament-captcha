@@ -4,6 +4,16 @@ All notable changes to `filament-captcha` will be documented in this file.
 
 # <<<<<<< HEAD
 
+## v1.9.0 - 2026-01-21
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/marcogermani87/filament-captcha/pull/15
+* Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/marcogermani87/filament-captcha/pull/13
+* Bump actions/checkout from 4 to 6 by @dependabot[bot] in https://github.com/marcogermani87/filament-captcha/pull/14
+
+**Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v1.8.0...v1.9.0
+
 ## v2.2.0 - 2026-01-21
 
 ### What's Changed
