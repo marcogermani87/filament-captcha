@@ -4,6 +4,14 @@ All notable changes to `filament-captcha` will be documented in this file.
 
 # <<<<<<< HEAD
 
+## v1.10.0 - 2026-06-18
+
+### What's Changed
+
+* Added support to Laravel 13
+
+**Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v1.9.0...v1.10.0
+
 ## v2.3.0 - 2026-06-18
 
 ### What's Changed
