@@ -21,7 +21,7 @@
         "php": "^8.2",
         "ext-gd": "*",
         "filament/filament": "^4.0|^5.0",
-        "gregwar/captcha": "^1.2",
+        "gregwar/captcha": "^2.1",
         "illuminate/contracts": "^11.0|^12.0|^13.0",
         "spatie/laravel-package-tools": "^1.16"
     },
