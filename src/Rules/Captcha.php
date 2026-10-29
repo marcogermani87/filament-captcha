@@ -13,6 +13,7 @@ class Captcha implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         $length = config('filament-captcha.length', 5);
+        $failed = false;
 
         if (strlen($value) !== $length) {
             $fail(
@@ -20,10 +21,18 @@ class Captcha implements ValidationRule
                     'length' => $length,
                 ])
             );
+
+            $failed = true;
         }
 
         if ($value !== session('filament_captcha_code')) {
             $fail(__('filament-captcha::filament-captcha.captcha_invalid'));
+
+            $failed = true;
+        }
+
+        if (! $failed) {
+            session()->forget('filament_captcha_code');
         }
     }
 }
