@@ -4,6 +4,20 @@ All notable changes to `filament-captcha` will be documented in this file.
 
 # <<<<<<< HEAD
 
+## v2.4.0 - 2026-10-29
+
+### What's Changed
+
+* Fix captcha failing on first submit in Livewire forms by @skillbobby in https://github.com/marcogermani87/filament-captcha/pull/26
+* Update gregwar/captcha requirement from ^1.2 to ^2.1 by @dependabot[bot] in https://github.com/marcogermani87/filament-captcha/pull/25
+* Bump actions/checkout from 6 to 7 by @dependabot[bot] in https://github.com/marcogermani87/filament-captcha/pull/24
+
+### New Contributors
+
+* @skillbobby made their first contribution in https://github.com/marcogermani87/filament-captcha/pull/26
+
+**Full Changelog**: https://github.com/marcogermani87/filament-captcha/compare/v2.3.0...v2.4.0
+
 ## v1.10.0 - 2026-06-18
 
 ### What's Changed
