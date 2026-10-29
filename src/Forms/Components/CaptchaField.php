@@ -17,15 +17,15 @@ class CaptchaField extends Field
 
     protected CaptchaBuilder $captcha;
 
+    protected PhraseBuilder $phraseBuilder;
+
     protected string $view = 'filament-captcha::forms.components.captcha-field';
 
     protected function setUp(): void
     {
         $charset = config('filament-captcha.charset', 'abcdefghijklmnpqrstuvwxyz123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
-        $phraseBuilder = new PhraseBuilder(config('filament-captcha.length', 5), $charset);
-
-        $this->captcha = new CaptchaBuilder(null, $phraseBuilder);
+        $this->phraseBuilder = new PhraseBuilder(config('filament-captcha.length', 5), $charset);
 
         $this->rules([new Captcha])
             ->dehydrated(false)
@@ -61,11 +61,20 @@ class CaptchaField extends Field
 
     public function refreshImage(): void
     {
-        $this->image = $this->getImage();
+        $this->image = $this->getImage(forceNew: true);
     }
 
-    protected function getImage(): string
+    protected function getImage(bool $forceNew = false): string
     {
+        $length = (int) config('filament-captcha.length', 5);
+        $existing = session('filament_captcha_code');
+
+        if (! $forceNew && is_string($existing) && strlen($existing) === $length) {
+            $this->captcha = new CaptchaBuilder($existing, $this->phraseBuilder);
+        } else {
+            $this->captcha = new CaptchaBuilder(null, $this->phraseBuilder);
+        }
+
         session(['filament_captcha_code' => $this->captcha->getPhrase()]);
 
         $backgroundColor = config('filament-captcha.background_color', [
